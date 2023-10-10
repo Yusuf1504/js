@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Farenhiet to celcius</h2>
+        <div class="inpitdiv">
+            <input type="text" id="input" placeholder="Farenhiet">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">convert to celcius</button>
+        </div>
+        <div id="result">
+
+        </div>
+        
+    </div>
+
+    <script>
+
+        function convert(){
+            const FaVal =Number(document.getElementById("input").value)
+            const celVal =(FaVal-32)*5/9
+            const result = document.getElementById("result")
+            result.innerHTML = celVal.toFixed(3) + " celcius "
+        }
+
+        
+    </script>
+    
+
+
+
+</body>
+</html>
